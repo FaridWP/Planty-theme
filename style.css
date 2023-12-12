@@ -82,9 +82,15 @@ nav ol,
 nav ul {
     list-style: none;
 }
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
 
 /* BODY */
 body {
+    width: 100vw;
     background-color: var(--pink-2);
 }
 
@@ -105,7 +111,7 @@ header {
 
 .menu {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: flex-end;
 }
 
@@ -129,7 +135,7 @@ header {
 /* FOOTER */
 footer {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 60px;
     padding: 20px 0px 21px 0px;
     justify-content: center;
@@ -140,7 +146,7 @@ footer {
 
 /* ACCUEIL */
 .page-id-9 {
-    width: 100%;
+    /* width: 100vw; */
 }
 section.hero {
     color: var(--green-1);
@@ -149,16 +155,16 @@ section.hero {
     gap: 80px;
     flex-direction: column;
     align-items: center;
+    height: 50vh;
 }
-section.hero div {
-    height: 700px;
+.hero {
 }
 section.hero h1 {
     max-width: 800px;
 }
 
 section.introduction {
-    width: 100%;
+    width: 100vw;
     background-image: url("/wp-content/uploads/2023/12/Rectangle-6.png");
     /* background-color: var(--white); */
     background-size: cover;
@@ -191,6 +197,13 @@ section.gouts {
     min-width: 250px;
 }
 
+.gallery1 {
+    width: 900px;
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center !important;
+}
+
 .btn-primary {
     display: flex;
     width: 198px;
@@ -204,7 +217,10 @@ section.gouts {
     margin: 40px;
 }
 
-section.avis h1 {
+.avis {
+    width: 100%;
+}
+.avis h1 {
     color: #3b8e46;
     margin-top: 133px;
     margin-bottom: 130px;
@@ -225,4 +241,158 @@ section.avis h1 {
 .img-footer {
     width: 100%;
     height: auto;
+}
+
+/* Responsive max 1120px */
+@media screen and (max-width: 1120px) {
+    .avis-container {
+        flex-direction: column;
+        gap: 80px;
+        padding-bottom: 115px;
+    }
+}
+
+/* Responsive max 1120px */
+@media screen and (max-width: 820px) {
+    .gallery1 {
+        flex-direction: column;
+    }
+}
+/* Responsive max 820px */
+@media screen and (max-width: 820px) {
+    header {
+        min-height: 100px;
+        /* justify-content: center; */
+    }
+    .logo {
+        margin: 0;
+        width: 150px !important;
+        height: auto;
+    }
+
+    .hero-title {
+        margin-left: 10px;
+        text-align: left;
+        width: 300px;
+        height: auto;
+        font-size: 30px;
+    }
+
+    .menu {
+        width: 100vw;
+        justify-content: right;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .menu-items {
+        justify-items: end;
+    }
+
+    .menu-items li:not(:last-child) {
+        padding-right: 0px;
+        font-weight: 400;
+    }
+    .menu-items li:last-child a {
+        color: var(--white);
+        background-color: var(--pink-1);
+        padding: 5px 30px 15px 30px;
+        font-weight: 700;
+    }
+}
+
+/* Responsive max 420px */
+@media screen and (max-width: 420px) {
+    header {
+        min-height: 60px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .logo {
+        margin: 0;
+    }
+
+    .menu {
+        width: 100vw;
+        justify-content: right;
+    }
+
+    .menu-items {
+        flex-direction: row;
+        gap: 5px;
+    }
+    .menu-items {
+        justify-items: end;
+    }
+
+    .menu-items li:not(:last-child) {
+        padding-right: 0px;
+        font-weight: 400;
+    }
+    .menu-items li:last-child a {
+        color: var(--white);
+        background-color: var(--pink-1);
+        padding: 5px 30px 5px 30px;
+        font-weight: 700;
+    }
+
+    .hero {
+    }
+
+    .hero-title {
+        margin-left: 10px;
+        text-align: left;
+        width: 300px;
+        height: auto;
+        /* text-align: center; */
+        font-size: 28px;
+    }
+
+    .introduction-text {
+        width: 300px;
+    }
+
+    .gallery1 {
+        margin-top: 20px;
+        max-width: 300px;
+        align-self: center;
+    }
+    .wp-image-81 {
+        width: 300px;
+        height: auto;
+    }
+    .wp-image-82 {
+        width: 300px;
+        height: auto;
+    }
+    .wp-image-83 {
+        width: 300px;
+        height: auto;
+    }
+    .wp-image-84 {
+        width: 300px;
+        height: auto;
+    }
+    .gallery-home {
+        margin: 0;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .avis-titre {
+        text-align: left;
+        /* margin-left: 50px; */
+        font-size: 28px;
+    }
+    .avis-text {
+        width: 196px;
+        text-align: left;
+    }
+    .avis-container {
+        display: flex;
+        gap: 80px;
+        padding-bottom: 60px;
+    }
 }
